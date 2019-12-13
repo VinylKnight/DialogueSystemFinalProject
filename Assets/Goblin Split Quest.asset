@@ -37,7 +37,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Bianemeens
+      value: Player Knight
       type: 0
       typeString: 
     - title: Pictures
@@ -45,7 +45,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: Barbarian Helping wrangle the Goblins
+      value: The player.
       type: 0
       typeString: 
     - title: IsPlayer
@@ -59,7 +59,7 @@ MonoBehaviour:
   - id: 2
     fields:
     - title: Name
-      value: Player Knight
+      value: Bianemeens
       type: 0
       typeString: 
     - title: Pictures
@@ -67,7 +67,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: The Player
+      value: Barbarian Helping wrangle the Goblins
       type: 0
       typeString: 
     - title: IsPlayer
@@ -167,6 +167,24 @@ MonoBehaviour:
       typeString: 
     - title: Is Item
       value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+  - id: 4
+    fields:
+    - title: Name
+      value: Good Goblins
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Is Item
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
   locations: []
@@ -328,7 +346,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hello Great Knight, There something wrong qwith the Goblins of this
+        value: Hello Great Knight, There something wrong with the Goblins of this
           world.
         type: 0
         typeString: 
@@ -345,7 +363,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(
+        value: Delay({{end}})
         type: 0
         typeString: 
       conversationID: 1
@@ -402,8 +420,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: They seem to have suffer from some kind magic that has split them in
-          two.
+        value: They seem to have suffered from some kind magic that has split them
+          in two.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -419,6 +437,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -623,8 +645,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: The violent counter parts have kidnapped the goblins and are holding
-          hostage. Would you be willing to help me rescue the poor creatures?
+        value: The violent counterparts have kidnapped the goblins and are holding
+          them hostage. Would you be willing to help me rescue the poor creatures?
         type: 0
         typeString: 
       - title: Parenthetical
@@ -725,7 +747,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("New Quest 1", "active")
+      userScript: SetQuestState("1st Goblin Rescue", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
