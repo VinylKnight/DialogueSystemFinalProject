@@ -746,7 +746,7 @@ MonoBehaviour:
   questEntryNumber: 1
   questEntryState: 0
   luaCode: 
-  sequence: Loadlevel(MalevolentGoblins)
+  sequence: Loadlevel(MalevolentGoblins, Spawn Point Area 2)
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 1
@@ -15982,7 +15982,7 @@ MonoBehaviour:
   questEntryNumber: 1
   questEntryState: 0
   luaCode: 
-  sequence: Loadlevel(MalevolentGoblins, Spawn Point Area 2)
+  sequence: LoadLevel(MalevolentGoblins);
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 1

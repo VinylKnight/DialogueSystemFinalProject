@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GoblinSplitScene.unity
+    guid: 8d153f360e5574d478a67c67b88d5280
+  - enabled: 1
+    path: Assets/Scenes/MalevolentGoblins.unity
+    guid: f0426994906f9c8408ef1ae83a429f8b
+  - enabled: 1
+    path: Assets/Scenes/MysticLeader.unity
+    guid: 9949d6e750230ad43b4c9cbbae80a901
   m_configObjects: {}
