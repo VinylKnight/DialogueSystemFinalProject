@@ -1307,7 +1307,7 @@ MonoBehaviour:
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
   conversation: 1st Rescue
-  conversationConversant: {fileID: 0}
+  conversationConversant: {fileID: 4946188195379760}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
   exclusive: 0
