@@ -688,7 +688,7 @@ PrefabInstance:
     - target: {fileID: 65707845505491674, guid: 19c412f8f5af8fa4dbe5adbf58d317e6,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 65707845505491674, guid: 19c412f8f5af8fa4dbe5adbf58d317e6,
         type: 3}
@@ -733,7 +733,7 @@ MonoBehaviour:
   trigger: 32
   condition:
     luaConditions:
-    - Item["Key_2"].Is_Item == true
+    - CurrentQuestState("Key 1") == "active"
     questConditions: []
     acceptedTags:
     - Player
@@ -746,8 +746,10 @@ MonoBehaviour:
   setQuestEntryState: 0
   questEntryNumber: 1
   questEntryState: 0
-  luaCode: 
-  sequence: Loadlevel(MalevolentGoblins, Spawn Point Area 2)
+  luaCode: SetQuestState("Key 1", "success")
+  sequence: 'LoadLevel(MalevolentGoblins);
+
+    Fade(In,1)'
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 1
@@ -789,6 +791,19 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: eb95577f24ae31845adca446eef1c68f, type: 2}
+--- !u!65 &92818796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92818794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: -1, y: 1, z: 0}
 --- !u!4 &92818799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4579623904907906, guid: 19c412f8f5af8fa4dbe5adbf58d317e6,
@@ -1859,6 +1874,21 @@ PrefabInstance:
     - target: {fileID: 400004, guid: 2b0156ab106d6f14abd29d337eb70351, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794786869090440522, guid: 2b0156ab106d6f14abd29d337eb70351,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794786869090440522, guid: 2b0156ab106d6f14abd29d337eb70351,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794786869090440522, guid: 2b0156ab106d6f14abd29d337eb70351,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b0156ab106d6f14abd29d337eb70351, type: 3}
@@ -15495,7 +15525,7 @@ MonoBehaviour:
   setQuestEntryState: 0
   questEntryNumber: 1
   questEntryState: 0
-  luaCode: 
+  luaCode: SetQuestState("Key 1", "success")
   sequence: 'LoadLevel(MalevolentGoblins);
 
     Fade(In,1)'

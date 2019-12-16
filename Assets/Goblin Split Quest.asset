@@ -555,7 +555,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}});
 
-          Camera(Full Left Altered,Meshtint Barbarian Blue,1)'
+          Camera(Full Left,Meshtint Barbarian Blue,1)'
         type: 0
         typeString: 
       conversationID: 1
@@ -706,7 +706,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(Full Left Altered,Meshtint Barbarian Blue,1)
+        value: Camera(Full Left,Meshtint Barbarian Blue,1)
         type: 0
         typeString: 
       conversationID: 1
@@ -927,7 +927,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(Full Left Altered,Meshtint Barbarian Blue,1)
+        value: Camera(Full Left,Meshtint Barbarian Blue,1)
         type: 0
         typeString: 
       conversationID: 1
@@ -1146,7 +1146,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(Full Left Altered,Meshtint Barbarian Blue,1)
+        value: Camera(Full Left,Meshtint Barbarian Blue,1)
         type: 0
         typeString: 
       conversationID: 1
@@ -1289,7 +1289,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Camera(Full Left Altered,Meshtint Barbarian Blue,1);
+        value: 'Camera(Full Left,Meshtint Barbarian Blue,1);
 
           Delay({{end}})     '
         type: 0
@@ -1557,7 +1557,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay({{end}};
 
-          Camera(Full Left Altered,Meshtint Barbarian Red,1)'
+          Camera(Full Left,Meshtint Barbarian Red,1)'
         type: 0
         typeString: 
       conversationID: 2
@@ -1783,7 +1783,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(Full Left Altered,Meshtint Barbarian Red,1)
+        value: Camera(Full Left,Meshtint Barbarian Red,1)
         type: 0
         typeString: 
       conversationID: 2
@@ -1856,7 +1856,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(Full Left Altered,Meshtint Barbarian Red,1)
+        value: Camera(Full Left,Meshtint Barbarian Red,1)
         type: 0
         typeString: 
       conversationID: 2
@@ -2104,7 +2104,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 244.28563
+        x: 241.96004
         y: 77.14285
         width: 160
         height: 30
@@ -2230,7 +2230,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["Goblins_Rescued"] >= 3
-      userScript: SetQuestState("2nd Goblin Rescue", "success")
+      userScript: 'SetQuestState("2nd Goblin Rescue", "success");
+
+        Item["Key_2"].Is_Item = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2286,7 +2288,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(Full Left Altered,Meshtint Barbarian Red,1)
+        value: Camera(Full Left,Meshtint Barbarian Red,1)
         type: 0
         typeString: 
       conversationID: 2
