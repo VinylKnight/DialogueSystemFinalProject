@@ -264,7 +264,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: The leader of the evil goblins has arisen.
+      value: Inventory of the good is being taken.
       type: 0
       typeString: CustomFieldType_Text
     - title: Success Description
@@ -292,13 +292,21 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Entry Count
-      value: 0
+      value: 1
       type: 1
       typeString: CustomFieldType_Number
     - title: Display Name
-      value: Confront the Source.
+      value: Higher Security
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: CustomFieldType_QuestState
+    - title: Entry 1
+      value: '[var=Last of The Goblins]/5 Saved'
+      type: 0
+      typeString: CustomFieldType_Text
   - id: 5
     fields:
     - title: Name
@@ -1610,7 +1618,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("2nd Goblin Rescue") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2254,7 +2262,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: Camera(Full Left,Meshtint Barbarian Red,1)
         type: 0
         typeString: 
       conversationID: 2
@@ -2264,7 +2272,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 10
+        destinationConversationID: 2
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Goblins_Rescued"] >= 3
       userScript: 'SetQuestState("2nd Goblin Rescue", "success");
 
@@ -2309,7 +2323,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Third brother is waiting for you but he seems to have abigger problem
+        value: Third brother is waiting for you but he seems to have a bigger problem
           than the three of us.
         type: 0
         typeString: 
@@ -2348,6 +2362,73 @@ MonoBehaviour:
         serializedVersion: 2
         x: 606.2065
         y: 86.896545
+        width: 160
+        height: 30
+    - id: 12
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Well good Job here I'll give you a key to head to third brother.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 430.22302
+        y: 177.14285
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -2523,7 +2604,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(Full Left,Meshtint Barbarian Green,1)
+        value: 'Camera(Full Left,Meshtint Barbarian Green,1);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -2540,7 +2623,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("Final Confrontation") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2597,7 +2680,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(Full Left,Meshtint Free Knight,1)
+        value: 'Camera(Full Left,Meshtint Free Knight,1);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -2744,7 +2829,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(Full Left,Meshtint Free Knight,1)
+        value: 'Camera(Full Left,Meshtint Free Knight,1);
+
+          Delay({{end}})'
         type: 0
         typeString: 
       conversationID: 3
@@ -2885,7 +2972,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: Delay({{end}})
         type: 0
         typeString: 
       conversationID: 3
@@ -2908,7 +2995,7 @@ MonoBehaviour:
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("Final Confrontation") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3174,7 +3261,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: Delay({{end}})
         type: 0
         typeString: 
       conversationID: 3
@@ -3358,7 +3445,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Camera(Full Left, Meshtint Fiery, 1);
+        value: 'Camera(Full Left, Boximon Fiery, 1);
 
           Delay({{end}})'
         type: 0
@@ -3437,7 +3524,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Camera(Full Left, Meshtint Free Knight,1)
+        value: Camera(Full Left,Meshtint Free Knight,1)
         type: 0
         typeString: 
       conversationID: 4
@@ -3609,7 +3696,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 235.49255
+        x: 236.98508
         y: 187
         width: 160
         height: 30
@@ -3656,7 +3743,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Camera(Full Left, Meshtint Fiery, 1);
+        value: 'Camera(Full Left, Boximon Fiery, 1);
 
           Delay({{end}})'
         type: 0

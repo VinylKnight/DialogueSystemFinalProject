@@ -793,7 +793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 8
+  trigger: 32
   condition:
     luaConditions:
     - Item["Key_2"].Is_Item == true
@@ -810,7 +810,7 @@ MonoBehaviour:
   questEntryNumber: 1
   questEntryState: 0
   luaCode: 
-  sequence: Loadlevel(MysticLeader)
+  sequence: LoadLevel(MysticLeader)
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 1
@@ -18233,7 +18233,7 @@ MonoBehaviour:
   questEntryNumber: 1
   questEntryState: 0
   luaCode: 
-  sequence: Loadlevel(MysticLeader)
+  sequence: LoadLevel(MysticLeader)
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 1
